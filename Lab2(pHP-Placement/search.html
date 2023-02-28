@@ -1,0 +1,22 @@
+<?php
+
+$my_array = array("apple", "banana", "orange", "grape", "pear");
+
+$search_element = readline("Enter the element to search for: ");
+
+$element_found = false;
+
+foreach ($my_array as $element) {
+  if ($element == $search_element) {
+    $element_found = true;
+    break;
+  }
+}
+
+if ($element_found) {
+  echo "The element '$search_element' was found in the array.";
+} else {
+  echo "The element '$search_element' was not found in the array.";
+}
+
+?>
