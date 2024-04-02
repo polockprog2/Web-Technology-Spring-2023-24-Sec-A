@@ -1,0 +1,428 @@
+*{
+  box-sizing: border-box;
+  color:blue;
+  }
+body 
+{ 
+  font-family: Arial, sans-if; 
+  margin: 20; 
+  padding: 40;
+  background-color: #5fb8b0b4;
+}
+.Gallary
+{
+  background-color: rgb(22, 36, 100); 
+  border: 1px solid #f3cdcd; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+  flex-basis: calc(33.333% - 20px);
+  margin: 10px; 
+   text-align: center;
+    padding: 20px; 
+  
+}
+section {
+  flex-basis: 48%;
+  margin-bottom: 2rem;
+}
+.Profilegrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 50%; /* This ensures that the profile picture covers the entire height of the section */
+  width: 90%; /* This ensures that the profile picture covers the entire width of the section */
+  margin: 0;
+  place-items: center;
+}
+
+.Profilegrid img {
+  max-width: 200%;
+  height: auto;
+  object-fit: cover; /* This property ensures that the entire image is visible, even if it has to crop some parts */
+}
+.product-grid 
+{ 
+  display:flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin: 20px; 
+}
+
+.product-item 
+{ 
+  background-color: rgb(118, 137, 221); 
+  border: 1px solid #f3cdcd; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+  flex-basis: calc(33.333% - 20px);
+  margin: 10px; 
+   text-align: center;
+    padding: 20px; 
+}
+
+.product-item img 
+{ 
+  max-width: 100%; 
+  height: auto; 
+}
+
+.product-item h3
+{ 
+  margin: 20px 0; 
+ }
+
+.product-item p
+{
+ margin: 5px 0; 
+}
+
+
+.offer
+{ 
+color: rgb(9, 82, 9); font-weight: bold; 
+}
+
+
+/*=============== NAV ===============*/
+.sidenav {
+height: 100%; /* 100% Full-height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1; /* Stay on top */
+top: 0; /* Stay at the top */
+left: 0;
+background-color: #3177b9; /* Black*/
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 20px; /* Place content 60px from the top */
+transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #03020231;
+display: block;
+transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+#mydownSidenav{
+  position:absolute;
+  bottom:0;
+}
+#main {
+transition: margin-left .5s;
+padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+/* show menu */
+.show-menu {
+right: 0;
+}
+
+/* Change background header */
+.scroll-header {
+background-color: var(--body-color);
+box-shadow: 0 0 4px rgba(0, 0, 0, 0.685);
+}
+
+.scroll-header .nav__logo,
+.scroll-header .nav__toggle {
+color: var(--title-color);
+}
+
+/* Active link */
+.active-link {
+position: relative;
+color: var(--title-color);
+}
+
+.active-link::before {
+content: "";
+position: absolute;
+background-color: var(--title-color);
+width: 100%;
+height: 2px;
+bottom: -0.75rem;
+left: 0;
+}
+
+.section__title {
+font-size: var(--h2-font-size);
+color: white;
+text-align: center;
+text-transform: capitalize;
+margin-bottom: var(--mb-2);
+}
+/*============*/
+header {
+background-color: #91ecec91;
+color: #fff;
+padding: 1rem;
+}
+
+header h1 {
+margin: 0;
+}
+
+main {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 2rem;
+}
+
+section {
+flex-basis: 48%;
+margin-bottom: 2rem;
+}
+
+section h2 {
+border-bottom: 2px solid #229599;
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+li {
+margin-bottom: 1rem;
+}
+
+li img {
+max-width: 100%;
+height: auto;
+}
+#intro {
+  background-image: url("assets/img/kyle.jpg");
+  background-size: cover;
+  background-position: center; 
+  height: 100vh;
+  position: relative;
+}
+
+#intro .content {
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%;
+  padding: 1rem; 
+}
+.content{
+  text-transform: capitalize;
+  text-shadow: #a79d9d 0.1em 0.1em;
+  color: #3d0647;
+}
+button {
+  position: absolute;
+  bottom: 2rem;
+  right: 0rem;
+  font-family: inherit;
+  font-size: 18px;
+  border-radius: 40em;
+  width: 8em;
+  height: 3em;
+  z-index: 1;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+}
+
+button .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 3em;
+  border-radius: 40em;
+  border: none;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.473),
+    rgba(150, 150, 150, 0.25)
+  );
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+button .blob {
+  position: absolute;
+  z-index: -1;
+  border-radius: 5em;
+  width: 5em;
+  height: 3em;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+button .blob:nth-child(2) {
+  left: 0em;
+  top: 0;
+  background: #ff930f;
+}
+
+button .blob:nth-child(3) {
+  left: 1.8em;
+  top: 0;
+  z-index: -1;
+  background: #bf0fff;
+}
+
+button .blob:nth-child(4) {
+  left: 4em;
+  top: -1em;
+  background: #ff1b6b;
+}
+
+button .blob:nth-child(5) {
+  left: 4.3em;
+  top: 1.6em;
+  background: #0061ff;
+}
+
+button:hover .blob:nth-child(2) {
+  background: #0061ff;
+}
+
+button:hover .blob:nth-child(3) {
+  background: #ff1b6b;
+}
+
+button:hover .blob:nth-child(4) {
+  background: #bf0fff;
+}
+
+button:hover .blob:nth-child(5) {
+  background: #ff930f;
+}
+
+button:hover .blob {
+  transform: scale(1.3);
+}
+
+button:active {
+  border: 2px solid white;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(240, 146, 224);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.review {
+  margin-bottom: 2rem;
+}
+
+.review p {
+  margin-bottom: 1rem;
+}
+
+.rating {
+  color: #000000;
+}
+.fas {
+  color: #000000 !important;
+  margin-right: 0.25rem;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 1rem;
+text-align: center;
+}
+
+footer p {
+padding:20px;
+margin: 0;}
