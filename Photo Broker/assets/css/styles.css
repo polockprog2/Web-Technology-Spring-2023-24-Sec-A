@@ -77,7 +77,7 @@ body.dark-theme {
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
   /* --body-color: hsl(var(--hue-color), 29%, 12%); */
-  --body-color: #21a6aa;
+  --body-color:#b1dddda3 ;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
@@ -146,12 +146,20 @@ input {
 }
 
 .section__title {
-  font-size: var(--h2-font-size);
+  font-style:oblique;
   color: var(--title-color);
   text-align: center;
   text-transform: capitalize;
   margin-bottom: var(--mb-2);
 }
+.section__subtitle{
+  font-style:oblique;
+  color: var(--title-color);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: var(--mb-2);
+}
+
 
 .container {
   max-width: 968px;
@@ -208,7 +216,7 @@ input {
     right: -100%;
     width: 70%;
     height: 100%;
-    box-shadow: -1px 0 4px rgba(40, 151, 173, 0.15);
+    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
     padding: 3rem;
     transition: 0.4s;
   }
@@ -247,7 +255,7 @@ input {
 /* Change background header */
 .scroll-header {
   background-color: var(--body-color);
-  box-shadow: 0 0 4px rgba(32, 126, 145, 0.685);
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
 }
 
 .scroll-header .nav__logo,
@@ -270,6 +278,7 @@ input {
   bottom: -0.75rem;
   left: 0;
 }
+
 
 /*=============== HOME ===============*/
 
@@ -296,6 +305,7 @@ input {
 .home__info {
   /* color: var(--white-color); */
   color: rgb(255, 255, 255);
+  
 }
 
 .home__data-subtitle {
@@ -359,7 +369,7 @@ input {
 
 /*=============== BUTTONS ===============*/
 
-/* .btn {
+ .btn {
   width: 150px;
   background-color: #5995fd;
   border: none;
@@ -376,7 +386,7 @@ input {
 
 .btn:hover {
   background-color: #4d84e2;
-} */
+} 
 
 .button {
   display: inline-block;
@@ -390,7 +400,7 @@ input {
 }
 
 .button:hover {
-  background-color: #5ccbdf;
+  background-color: #b8d5ec;
 }
 
 .button--flex {
@@ -495,62 +505,201 @@ input {
   background-image: none;
 }
 
-/*=============== EXPERIENCE ===============*/
-.experience__container {
-  row-gap: 2.5rem;
-  justify-content: center;
-  justify-items: center;
+/*================Find Photographer===============*/
+.finding {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-.experience__content {
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1rem;
-  justify-items: center;
-  padding: 0 2rem;
+.finding__container {
+justify-content:flex-start;
+margin-left: 10%;
+  padding: 10rem 0;
+
 }
 
-.experience__number {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: var(--mb-0-5);
+.finding h2 {
+  color: white;
+  margin-bottom: 2rem;
 }
 
-.experience__description {
-  font-size: var(--small-font-size);
+.finding p {
+  color: white;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*===============Photography Tips=========*/
+.Tips{
+  background-size:cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.photograph-parent{
+  justify-content:flex-start;
+  margin-left: 10%;
+  padding: 10rem 0;
+}
+.Tips h2{
+color: #fff;
+margin-bottom: 2 rem;
+}
+.Tips p{
+  color: white;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*=============Join as Photographer==========*/
+
+.are-you-a-container {
+  justify-content: space-between;
+  align-items: center;
 }
 
-.experience__img {
+.main-frame1 h2{
+  color: #fff;
+margin-bottom: 2 rem;
+} 
+
+.main-frame1 p{
+  color: white;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.learn-more {
+  align-self: stretch;
   position: relative;
-  padding-bottom: 2rem;
+
 }
 
-.experience__img-one,
-.experience__img-two {
-  transition: var(--img-transition);
-  border-radius: 5px;
-}
-
-.experience__img-one:hover,
-.experience__img-two:hover {
-  transform: var(--img-scale);
-  border-radius: 5px;
-}
-
-.experience__overlay {
-  overflow: var(--img-hidden);
-}
-
-.experience__overlay:nth-child(1) {
-  width: 263px;
-  margin-right: 2rem;
-}
-
-.experience__overlay:nth-child(2) {
-  width: 120px;
+.default-rectangle-icon {
+  align-self: stretch;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
   position: absolute;
-  top: 2rem;
-  right: 0;
+  left: 0.563rem;
+  top: 0.5rem;
+  width: 100%;
+  transform: scale(1.052);
+
 }
+.wrapper-default-rectangle {
+  align-self: stretch;
+  height: 29.625rem;
+  position: relative;
+  border-radius: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  
+}
+
+.child-rectangle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+  box-sizing: border-box;
+  min-width: 14rem;
+  max-width: 100%;
+  
+}
+.wrapper-rectangle-14-child {
+  height: 100%;
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 14rem;
+  object-fit: contain;
+  position: absolute;
+  left: 0.75rem;
+  top: 0.625rem;
+  width: 100%;
+  transform: scale(1.067);
+}
+.wrapper-rectangle-14 {
+  height: 44.188rem;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-16xl);
+  min-width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-frame1,
+.rectangle-a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
+.rectangle-a {
+  flex: 1;
+  gap: 0 1.25rem;
+  min-width: 28.813rem;
+  max-width: 100%;
+}
+.main-frame1 {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-azure-100);
+  overflow: hidden;
+  padding: 2.563rem 5.063rem 2.625rem 5.688rem;
+  box-sizing: border-box;
+  gap: 0 7.563rem;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-black);
+  font-family: var(--font-ingrid-darling);
+}
+@media screen and (max-width: 1125px) {
+  .main-frame1 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .are-you-a-container,
+  .learn-more1 {
+    font-size: var(--font-size-19xl);
+  }
+}
+@media screen and (max-width: 750px) {
+
+  .rectangle-a {
+    flex-wrap: wrap;
+  }
+  .main-frame1 {
+    gap: 0 3.75rem;
+    padding-left: 2.813rem;
+    padding-right: 2.5rem;
+    box-sizing: border-box;
+  }
+}
+
 
 /*=============== Package ===============*/
 .place__card,
@@ -962,3 +1111,90 @@ input {
     height: 640px;
   }
 }
+
+/*=========Checkout Photographers============*/
+.product-grid 
+    { 
+      size: 20px;
+      display:flex; 
+      margin: 20px;
+      flex-wrap: nowwrap; 
+      justify-content: center; 
+      margin: 20px; 
+    }
+
+    .product-item 
+    { 
+    background-color: rgb(136, 27, 27); 
+    border: 1px solid #ddd; 
+    box-shadow: 9px 2px 0px rgba(0, 0, 0, 0.1); 
+    flex-basis: calc(33.333% - 20px); 
+    margin: 10px; 
+    text-align: center; 
+    padding: 10px; 
+    }
+
+    .product-item img 
+    { 
+    max-width: auto; 
+    height: auto; 
+    }
+
+    .product-item h3
+    { 
+    margin: 20px 0; 
+    }
+
+    .product-item p
+    {
+    margin: 5px 0; 
+    }
+    .offer
+    { 
+    color: rgb(9, 82, 9);
+    font-weight: bold; 
+    }
+    .photogrid_container
+    {
+      display: block;
+      margin-block:  100px;
+    }
+
+    .text-content {
+    flex: 1;
+    }
+
+    .name {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    }
+
+    .location {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    }
+
+    .rating {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    }
+
+    .star {
+    font-size: 1.5rem;
+    color: #ffc107;
+    margin-right: 5px;
+    }
+
+    .rate {
+    text-align: center;
+    }
+
+    .hr-rate {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    }
+/*===================*/
