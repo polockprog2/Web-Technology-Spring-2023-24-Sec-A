@@ -1,32 +1,59 @@
 <?php
 session_start();
+include 'config.php';
+if (isset($_POST['submit'])) {
+   $sql = "insert into client (firstname,lastname,email,username,password,type) values ('".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['username']."','".$_POST['password']."','".$_POST['type']."')";
+ 
+   $result = mysqli_query($conn,$sql);
 
-if(isset($_POST['signup'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    echo "<script>alert('Signup successful. You can now login.');</script>";
-    header("Location: Login.php");
-    exit;
+ if($result){
+     echo "<script>alert('Sign up Successfully!')</script>";
+     header("Location:Login.php");
+ }else{
+     die("Error: ".mysqli_error($conn));
+ }
 }
+
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-    <h2>Signup</h2>
-    <form method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br><br>
-        <button type="submit" name="signup">Sign Up</button>
-    </form>
+<form class="form">
+    <p class="title">Create your account </p>
+    <p class="message">Signup now and get full access to our app. </p>
+    <label>    
+    <div class="flex">
+        
+            <input class="input" type="text" name="firstname" placeholder="Firstname" required="">
+            <input class="input" type="text" name="lastname" placeholder="Lastname" required="">
+            </div> 
+        </label>
+              
+    <label>
+        <input class="input" type="email" name="email" placeholder="Email" required="">
+        <input class="input" type="text" name="username" placeholder="username" required="">
+        <input class="input" type="password" name="password" placeholder="Password" required="">   
+    </label> 
+    </label>
+    <select class=usertype id="type" name="type">
+        <option value="photographer">Photographer</option>
+        <option value="user">User</option>
+        <option value="organizer">Organizer</option>
+        </select>
+
+
+<label>
+    <button class="submit">Submit</button>
+    <p class="signin">Already have an acount ? <a href="Login.php">Sign in</a> </p>
+</label>
+</form>
+
 </body>
 </html>
