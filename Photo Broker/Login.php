@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
        }
        elseif($row["type"]==="photographer")
        {
-        header("location:photographerPage/photographer.php");
+        header("location:photographerPage/pre.php");
        }
        elseif($row["type"]=="organizer")
        {
-         header("Organizer/organizer.html");
+         header("Location:Organizer/organizer.html");
        }
        elseif($row["type"]=="admin")
        {

@@ -1,17 +1,12 @@
 <?php
 session_start();
 include 'config.php';
-if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"]=="POST") {
    $sql = "insert into client (firstname,lastname,email,username,password,type) values ('".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['username']."','".$_POST['password']."','".$_POST['type']."')";
  
    $result = mysqli_query($conn,$sql);
+   header("Location:Login.php");
 
- if($result){
-     echo "<script>alert('Sign up Successfully!')</script>";
-     header("Location:Login.php");
- }else{
-     die("Error: ".mysqli_error($conn));
- }
 }
 
 
@@ -25,7 +20,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-<form class="form">
+<form method="post" class="form">
     <p class="title">Create your account </p>
     <p class="message">Signup now and get full access to our app. </p>
     <label>    
@@ -42,7 +37,7 @@ if (isset($_POST['submit'])) {
         <input class="input" type="password" name="password" placeholder="Password" required="">   
     </label> 
     </label>
-    <select class=usertype id="type" name="type">
+    <select class="type" id="type" name="type">
         <option value="photographer">Photographer</option>
         <option value="user">User</option>
         <option value="organizer">Organizer</option>
