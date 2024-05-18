@@ -1,54 +1,25 @@
-<?php
-session_start();
-include 'config.php';
-if ($_SERVER["REQUEST_METHOD"]=="POST") {
-   $sql = "insert into client (firstname,lastname,email,username,password,type) values ('".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['username']."','".$_POST['password']."','".$_POST['type']."')";
- 
-   $result = mysqli_query($conn,$sql);
-   header("Location:Login.php");
-
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Signup Page</title>
+    
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
+
 <body>
-<form method="post" class="form">
-    <p class="title">Create your account </p>
-    <p class="message">Signup now and get full access to our app. </p>
-    <label>    
-    <div class="flex">
-        
-            <input class="input" type="text" name="firstname" placeholder="Firstname" required="">
-            <input class="input" type="text" name="lastname" placeholder="Lastname" required="">
-            </div> 
-        </label>
-              
-    <label>
-        <input class="input" type="email" name="email" placeholder="Email" required="">
-        <input class="input" type="text" name="username" placeholder="username" required="">
-        <input class="input" type="password" name="password" placeholder="Password" required="">   
-    </label> 
-    </label>
-    <select class="type" id="type" name="type">
-        <option value="photographer">Photographer</option>
-        <option value="user">User</option>
-        <option value="organizer">Organizer</option>
-        </select>
+    <form class="form">
+        <p class="title">Manage Your Account</p>
+        <p class="message">Sign in now and get full access to our app.</p>
 
-
-<label>
-    <button class="submit">Submit</button>
-    <p class="signin">Already have an acount ? <a href="Login.php">Sign in</a> </p>
-</label>
+        <div class="flex">
+          <button class="input" type="button" onclick="location.href='Photographer/reg/signup.php'">Photographer</button>
+            <button class="input" type="button" onclick="location.href='client/reg/signup.php'">Client</button>
+            <button class="input" type="button" onclick="location.href='Organizer/reg/signup.php'">Organizer</button>
+            <button class="input" type="button" onclick="location.href='admin/reg/login.php'">Admin</button>
+           
+        </div>
 </form>
-
 </body>
+
 </html>
